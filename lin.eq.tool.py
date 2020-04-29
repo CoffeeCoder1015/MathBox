@@ -22,8 +22,13 @@ def equalization_eq(eq):
                     s1s[0] = list(s1s[0])
                     eq[i][I] = s1s
 
-            if str(type(eq[i][I])) == "<class \'list\'>" and I < len(eq[i])-1:
-
+                      
+       
+    tswaps = []
+    for i in range(0,len(eq)):
+        for I in range(0,len(eq[i])-1):
+            
+            if str(type(eq[i][I])) == "<class \'list\'>":
                 for j in range(0,len(eq[i][I])):
 
                     if str(type(eq[i][I][j])) == "<class \'list\'>":
@@ -34,13 +39,7 @@ def equalization_eq(eq):
                             else:
                                 eq[i][I][j][0]+=eq[i][I][j][1]
                                 del eq[i][I][j][1]
-    
-    
-    tswaps = []
-    for i in range(0,len(eq)):
-        for I in range(0,len(eq[i])-1):
-            
-            if str(type(eq[i][I])) == "<class \'list\'>":
+
                 coe_swap_v = 1
                 for _ in range(1,len(eq[i][I])):
                     coe_swap_v*=eq[i][I][1]

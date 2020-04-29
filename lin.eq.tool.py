@@ -5,7 +5,7 @@ equations = []
 equations_solving = 2
 for i in range(0,equations_solving):
     apo = input("Equation coefs ("+str(i+1)+"):").split(" ")
-    apo = [int(i) for i in apo]
+    apo = [float(eval(i)) for i in apo]
     equations.append(apo)
 
 Asec = copy.deepcopy(equations)

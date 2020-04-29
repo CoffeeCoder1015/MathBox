@@ -97,9 +97,8 @@ def equalization_eq(eq):
         tval = 1
         for tvv in tswaps:
             tval *= tvv
-            
+
         eq[i][len(eq[i])-1] *= tval
-        print("1>>>>",eq)
         for I in range(0,len(eq[i])):
             if str(type(eq[i][I])) == "<class \'list\'>":
                 eq[i][len(eq[i])-1]+= -1*eq[i][I][len(eq[i][I])-1]
@@ -111,7 +110,7 @@ def equalization_eq(eq):
         
 
 equalization_eq(equations)  
-print(equations)
+
 Asec = copy.deepcopy(equations)
 del Asec[0][2]
 del Asec[1][2]

@@ -21,8 +21,6 @@ def equalization_eq(eq):
                     s1s = s0s.replace("(","").replace(")","").split("/")
                     s1s[0] = list(s1s[0])
                     eq[i][I] = s1s
-
-                      
        
     tswaps = []
     for i in range(0,len(eq)):
@@ -45,6 +43,7 @@ def equalization_eq(eq):
                     coe_swap_v*=eq[i][I][1]
                     del eq[i][I][1]
                 tswaps.append(float(coe_swap_v))
+                
             else:
                 tswaps.append(1)
         tswaps.reverse()

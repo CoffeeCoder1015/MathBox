@@ -4,6 +4,7 @@ import copy
 equations = []
 
 equations_solving = 2
+print(" - Please factorise most of the numbers - ")
 for i in range(0,equations_solving):
     apo = input("Equation coefs ("+str(i+1)+"):").split(" ")
     equations.append(apo)
@@ -21,7 +22,7 @@ def equalization_eq(eq):
                     s1s = s0s.replace("(","").replace(")","").split("/")
                     s1s[0] = list(s1s[0])
                     eq[i][I] = s1s
-       
+    
     tswaps = []
     for i in range(0,len(eq)):
         for I in range(0,len(eq[i])-1):
@@ -47,7 +48,6 @@ def equalization_eq(eq):
             else:
                 tswaps.append(1)
         tswaps.reverse()
-
         
         for I in range(0,len(eq[i])-1):
             if str(type(eq[i][I])) == "<class \'list\'>":
@@ -83,8 +83,6 @@ def equalization_eq(eq):
                    del eq[i][I][idx]
                eq[i][I].insert(1,eval(evs))
 
-        
-
         for I in range(0,len(eq[i])-1):
             if str(type(eq[i][I])) == "<class \'list\'>":
                 for j in range(0,len(eq[i][I])):
@@ -108,7 +106,6 @@ def equalization_eq(eq):
         
 
 equalization_eq(equations)  
-
 Asec = copy.deepcopy(equations)
 del Asec[0][2]
 del Asec[1][2]

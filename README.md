@@ -1,1 +1,1 @@
-My way of saying 'f u' to math class
+Whole bunch of math tools 😉

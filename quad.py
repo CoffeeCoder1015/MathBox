@@ -13,9 +13,9 @@ def solve(a,b,c):
     pf="%s / %s"%((-b + sqrt_block),denom)
     mf="%s / %s"%((-b - sqrt_block),denom)
     x.insert(1,p)
-    x.insert(2,pf)
+    x.insert(2,"frac: "+pf)
     x.insert(4,m)
-    x.insert(5,mf)
+    x.insert(5,"frac: "+mf)
     
     ans = x
 

@@ -4,7 +4,7 @@ import copy
 equations = []
 
 equations_solving = 2
-print(" - Please factorise most of the numbers - ")
+print(" - Please factorise most of the numbers - ax , by, c as input standard ")
 for i in range(0,equations_solving):
     apo = input("Equation coefs ("+str(i+1)+"):").split(" ")
     equations.append(apo)
@@ -107,6 +107,7 @@ def equalization_eq(eq):
 
 equalization_eq(equations)  
 Asec = copy.deepcopy(equations)
+print(Asec)
 del Asec[0][2]
 del Asec[1][2]
 A = numpy.array(Asec)
